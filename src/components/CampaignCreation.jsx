@@ -20,8 +20,8 @@ const CampaignCreation = () => {
 
   const sendCampaign = async (campaign) => {
     try {
-      const response = await fetch('http://localhost:3001/api/send-campaign', {
-        method: 'POST',
+      const response = await fetch('https://manzoor-bhai-server-suycd.ondigitalocean.app/api/send-campaign', {
+        method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
         },
@@ -39,7 +39,7 @@ const CampaignCreation = () => {
       }
     } catch (error) {
       console.error('Error sending campaign:', error);
-      alert('Failed to send campaign');
+      // alert('Failed to send campaign');
     }
   };
 

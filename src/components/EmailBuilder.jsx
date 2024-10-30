@@ -39,6 +39,14 @@ const EmailBuilder = ({ selectedTemplate, onSave }) => {
 
     editorInstance.current = editor;
 
+    // Add save button to the panel
+    editor.Panels.addButton('options', {
+      id: 'save-button',
+      className: 'fa fa-save',
+      command: 'save-template',
+      attributes: { title: 'Save Template' }
+    });
+
     // Load template content if provided
     if (selectedTemplate?.html) {
       editor.setComponents(selectedTemplate.html);
